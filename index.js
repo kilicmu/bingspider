@@ -77,10 +77,11 @@ const savePicture = (downloadPath = './images', currentNo = 0) => {
   })
 }
 
-/**
- * @return {array} 获取目前已经保存的图片列表
+/*
+ * 获取目前已经保存的图片列表
+ * @return {array}
  */
-const getEexistPictureList = () => {
+const getExistPictureList = () => {
   let res = []
   try {
     res = require(path.resolve(__dirname, pictureList))
@@ -91,4 +92,4 @@ const getEexistPictureList = () => {
   return res
 }
 
-module.exports = { savePicture, getEexistPictureList }
+module.exports = { savePicture, getExistPictureList }
